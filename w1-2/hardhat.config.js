@@ -1,7 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
 require('hardhat-abi-exporter');
-// require("./task/counter.js");
 
 const fs = require('fs');
 const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -27,14 +26,14 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.9",
 
-  abiExporter: {
-    path: './deployments/habi',
-    clear: true,
-    flat: true,
-    only: [],
-    spacing: 2,
-    pretty: true,
-  },
+  // abiExporter: {
+  //   path: './deployments/habi',
+  //   clear: true,
+  //   flat: true,
+  //   only: [],
+  //   spacing: 2,
+  //   pretty: true,
+  // },
 
   networks: {
     dev: {
